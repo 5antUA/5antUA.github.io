@@ -1,0 +1,133 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя перша Веб-сторінка</title>
+</head>
+
+<body style="background-image: url(image/rainbow.jpg); background-size: 50%;">
+    <hr color="#FFFFFF">
+
+    <a href="Poltava.html" style="text-decoration: none; color: #FFFFFF;" id="link">* Моє рідне місто</a><br>
+    <a href="Poltava.html#universities" style="text-decoration: none; color:
+#FFFFFF;">* Bузи Полтавщини</a><br>
+    <a href="index.html#favoriteDishes" style="text-decoration: none; color:
+#FFFFFF;">* Мої улюблені стави</a>
+
+    <!--ABOUT ME-->
+    <hr color="#FFFFFF">
+    <h1 style="text-align: center; color: #FFFFFF;">Про себе</h1>
+    <h2 style="color: #FFFFFF;">В двох словах...</h2>
+    <p style="color: #FFFFFF; font-size: large;">
+        <i>Мене звати Ростислав, я народився 1 червня 2004 року в місті
+            Полтава, де навчався в загальньоосвітні школі №28 з 2011 по 2022 рік. З самого малечку в мене була тяга до
+            математики та логічних задач.
+            Я кожен рік був призером олімпіад з математики та англійської мови. Саме так приблизно в 8 класі я для себе
+            обрав напрям в IT.<br><br>
+            Після закінчення 11 класів поступив на спеціальність 122 "Комп'ютерні науки".
+            На даний момент я є другокурсником чудового університету.</i><br>
+    </p>
+    <!--My subject-->
+    <h2 style="color: #FFFFFF;">Мої предмети</h2>
+    <ol style="color: #FFFFFF;">
+        <li>ООП</li>
+        <li>Комп'ютерні мережі</li>
+        <li>Фізичне виховання</li>
+        <li>Іноземна мова</li>
+        <li>Веб-дизайн</li>
+        <li>Теорія алгоритмів</li>
+    </ol><br>
+    <h2 id="favoriteDishes" style="color: #FFFFFF;">Мої улюблені страви</h2>
+    <ul style="color: #FFFFFF;">
+        <li>Шаурма йоу</li>
+        <li>Борщ</li>
+        <li>Картопля</li>
+        <li>Салати</li>
+    </ul>
+    <hr color="#FFFFFF">
+
+    <!-- ABOUT MY HOBBY -->
+    <h1 style="text-align: center; color: #FFFFFF;">Моє хобі</h1>
+    <h2 style="color: #FFFFFF;">В двох словах...</h2>
+    <p style="color: #FFFFFF; font-size: large;">
+        У вільний час я люблю грати в комп'ютерні ігри зі своїми друзями (наприклад: Minecraft, Terraria, Vintage Story,
+        CS2).
+        Якщо у моїх друзів не знаходитьсячасу на ігри, то я пишу код на мові програмування C++ або C#. Особливо люблю
+        вивчати щось нове для себе.
+        Наприклад, декілька днів назад я почав вчити, що таке кватерніони.</p><br>
+    <!-- PROGRAMM CODE -->
+    <h2 style="color: #FFFFFF;">Програмування</h2>
+    <pre style="color: #FFFFFF;">
+#pragma once
+struct NodeUnary {
+    double data;
+    NodeUnary* next;
+    NodeUnary(double data) : data(data), next(NULL) {}
+};
+
+class OneLinkedList {
+public:
+    NodeUnary* head, * tail;
+    OneLinkedList() { this->head = this->tail = NULL; }
+    OneLinkedList(double data) { push_front(data); }
+    ~OneLinkedList() { while (head != NULL) pop_front(); }
+
+    // ADDING AN ELEMENT TO THE BEGINNING OF THE LIST
+    void push_front(double data) {
+    NodeUnary* node = new NodeUnary(data);
+    node->next = head;
+    head = node;
+    if (tail == NULL) tail = head;
+    }
+
+    void push_back(double data)
+    {
+    NodeUnary* node = new NodeUnary(data);
+    if (head == NULL) {
+        head = tail = node;
+    }
+    else 
+    {
+        tail->next = node;
+        tail = node;
+    }
+    }
+    // DELETING THE FIRST ELEMENT OF THE LIST
+    void pop_front() {
+    if (head == NULL) return;
+    else if (head == tail) {
+    delete head;
+    head = tail = NULL;
+    }
+    else {
+    NodeUnary* node = head;
+    head = node->next;
+    delete node;
+    }
+}
+</pre>
+    <hr color="#FFFFFF">
+    <div style="text-align: right;">
+        <p style="margin: 5px 0px; color: #FFFFFF;"><i>Студент групи 204-ТН Кашпер Р.В.</i></p>
+        <p style="margin: 5px 0px; color: #FFFFFF;"><i>Номер телефону: +380687067931</i></p>
+        <a href="rostykkashper2@gmail.com" style="text-decoration: none; color:
+        #FFFFFF;"><i>E-mail: rostykkashper2@gmail.com</i></a>
+    </div><br>
+    <div style="text-align: right; margin: 5px 0;">
+        <a href="https://www.instagram.com/graffi_man?igsh=MTZsOGxqMzE0OXU5Nw==" target="_blank" style="text-decoration:
+none; color: #FFFFFF;">My Instagram<img src="image/Instagram.jpg" width="20px" style="margin-left: 5px;"
+                alt="Instagram"></a><br>
+        <a href="https://www.facebook.com/profile.php?id=100018088862183
+" target="_blank" style="text-decoration:
+none; color: #FFFFFF;">My Facebook<img src="image/Facebook.png" width="20px" style="margin-left: 5px;"
+                alt="Facebook"></a><br>
+        <a href="https://github.com/5antUA" target="_blank" style="text-decoration:
+none; color: #FFFFFF;">My GitHub<img src="image/GitHub.png" width="20px" style="margin-left: 5px;"
+                alt="GitHub"></a><br>
+    </div><br>
+    <a href="#link" style="text-decoration: none; color: #FFFFFF; float:
+right;"><i>* На початок сторінки</i></a>
+</body>
+
+</html>
